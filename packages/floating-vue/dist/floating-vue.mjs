@@ -969,7 +969,7 @@ function mt(e, t, o, i, s, p) {
       position: e.result.strategy,
       transform: `translate3d(${Math.round(e.result.x)}px,${Math.round(e.result.y)}px,0)`
     } : void 0),
-    "aria-hidden": e.shown ? "false" : "true",
+    "aria-hidden": e.shown || e.autoHide ? "false" : "true",
     tabindex: e.autoHide ? 0 : void 0,
     "data-popper-placement": e.result ? e.result.placement : void 0,
     onKeyup: t[2] || (t[2] = je((n) => e.autoHide && e.$emit("hide"), ["esc"]))
@@ -1556,7 +1556,7 @@ function Ct(e, t = {}) {
 }
 const Gt = {
   // eslint-disable-next-line no-undef
-  version: "5.2.2",
+  version: "5.2.2-1",
   install: Ct,
   options: u
 };
